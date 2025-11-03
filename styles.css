@@ -1,0 +1,117 @@
+:root {
+  --bg-color: #fff8f3;
+  --accent-color: #f5c6aa;
+  --text-color: #3b2e2a;
+  --card-bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text-color);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.about, .moments, .notes, .playlist, .typewriter {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.moments ul {
+  list-style-type: '✨ ';
+  padding-left: 1.2rem;
+}
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.note-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+button {
+  background: var(--accent-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.playlist-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.playlist .card {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background 0.2s;
+}
+
+.playlist .card:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.typewriter {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  white-space: pre-line;
+}
+
+.confetti {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+}
